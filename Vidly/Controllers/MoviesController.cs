@@ -17,7 +17,11 @@ namespace Vidly.Controllers
                 Name = "Shrek!"
             };
 
-            return View(movie);
+            //return View(movie);
+
+            //return Content("hoi everyone");
+            //return HttpNotFound();
+            return RedirectToAction("Index", "Home", new { page = 1, sortBy = 2 });
         }
     }
 }
