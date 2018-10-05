@@ -23,5 +23,15 @@ namespace Vidly.Controllers
             //return HttpNotFound();
             return RedirectToAction("Index", "Home", new { page = 1, sortBy = 2 });
         }
+
+        public ActionResult Edit(int id)
+        {
+            return Content("MovieId:" + id.ToString());
+        }
+
+        private ActionResult Content(string v, int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
