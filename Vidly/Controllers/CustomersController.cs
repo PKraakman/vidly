@@ -15,8 +15,8 @@ namespace Vidly.Controllers
         {
             var customers = new List<Customer>
             {
-                new Customer {Name = "Customer 11"},
-                new Customer {Name = "Customer 22"}
+                new Customer {Name = "Customer 11", Id = 1},
+                new Customer {Name = "Customer 22", Id = 2}
             };
 
             var viewModel = new CustomersViewModel
@@ -25,6 +25,11 @@ namespace Vidly.Controllers
             };
 
             return View(viewModel);
+        }
+
+        public ActionResult detail()
+        {
+            return View();
         }
     }
 }
