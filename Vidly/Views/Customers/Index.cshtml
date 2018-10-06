@@ -1,5 +1,21 @@
-﻿@Model  Vidly.ViewModels.CustomersViewModel
+﻿@model  Vidly.ViewModels.CustomersViewModel
 
 
 <h2>Customers Index</h2>
 
+@{
+    if (Model.Customers.Count < 1)
+    {
+        <text>No customers in the system</text>
+    }
+    else
+    {
+        <ul>
+            @{ foreach (var customer in Model.Customers)
+                {
+                    <li>@customer.Name</li>
+                }
+            }
+        </ul>
+    }
+}

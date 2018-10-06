@@ -13,9 +13,18 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer 11"},
+                new Customer {Name = "Customer 22"}
+            };
 
-            return View();
+            var viewModel = new CustomersViewModel
+            {
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
     }
 }
